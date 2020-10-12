@@ -1,0 +1,28 @@
+<h1> Perrito </h1>
+
+<p>
+    <strong> Nombre: </strong>
+    <%= @dog.name %>
+
+</p>
+
+<p>
+    <strong> Historia: </strong>
+    <%= @dog.content %>
+
+</p>
+
+<p>
+    <strong> Estado: </strong>
+    <% @dog.adopted %>
+    <% if @dog.adopted === true %>
+        <%= "perrito adoptado" %>
+    <% else %>
+        <%= "perrito en adopción" %>
+    <%end %>
+</p>
+
+<p>
+    <strong>Agregado </strong>
+    <%= @dog.created_at %>
+</p>

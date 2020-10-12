@@ -1,0 +1,24 @@
+<h1> Nuevo perrito <h1>
+
+<%= form_for :dog, url: dogs_path do |f| %>
+    <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+    </p>
+
+    <p>
+        <%= f.label :content %><br>
+        <%= f.text_area :content %>
+    </p>
+
+     
+    <select name="dog[adopted]">
+        <option value="true"> Adoptado </option>
+        <option value="false">En adopción </option>
+    </select>
+
+    <p>
+        <%= f.submit :agregar %>
+    </p>
+<%end%>
+

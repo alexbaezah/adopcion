@@ -1,0 +1,27 @@
+<h1> Editando perrito <h1>
+
+<%= form_with model: @dog do |f| %>
+    <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+    </p>
+
+    <p>
+        <%= f.label :content %><br>
+        <%= f.text_area :content %>
+    </p>
+
+     
+    <select name="dog[adopted]">
+        <option value="true"> Adoptado </option>
+        <option value="false">En adopción </option>
+    </select>
+
+    <p>
+        <%= f.submit :editar %>
+    </p>
+<%end%>
+
+
+
+
